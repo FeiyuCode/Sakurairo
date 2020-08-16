@@ -17,7 +17,7 @@
 bloginfo( 'name' );$site_description = get_bloginfo( 'description', 'display' );
 if ( $site_description && ( is_home() || is_front_page() ) ) echo " - $site_description";if ( $paged >= 2 || $page >= 2 ) echo ' - ' . sprintf( __( 'page %s'), max( $paged, $page ) );/*第 %s 页*/?>
 </title>
-<link type="text/css" media="all" href="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository/static/css/basic/404_lib.css" rel="stylesheet" />
+<link type="text/css" media="all" href="https://at.alicdn.com/t/font_679578_qyt5qzzavdo39pb9.css" rel="stylesheet" />
 <?php wp_head(); ?>
 <script>
 var the_url=window.location.href;

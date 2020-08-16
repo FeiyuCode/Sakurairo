@@ -119,6 +119,7 @@ color: #676767 !important}
     box-shadow: none;
     border: none;
     opacity: .8;
+	  margin-right: 8px;
 }
 
 .login .button.wp-hide-pw .dashicons{
@@ -337,14 +338,16 @@ input[type=checkbox]:checked:before {
 }
 
 .forgetmenot label {
+  display: block;
   cursor: pointer;
   text-indent: -999.9px;
   width: 21.0px;
   height: 11.0px;
-  background: grey;
-  display: block;
   border-radius: 10.0px;
   position: relative;
+  background-color: #696d72;
+	
+	
 }
 
 .forgetmenot label:after {
@@ -387,3 +390,17 @@ input[type=checkbox]:checked:before {
     display: inline-block;
 	margin-bottom: 3px;
 }
+
+/*登录界面验证码框修复*/
+/* 圆角 https://www.feiyuacg.com/wp-admin/css/forms.min.css?ver=5.4.2:2 */
+.aiowps-captcha-equation {
+    padding: 0 35px;
+}
+
+/*登录框居中*/
+#login{
+	top: 44%;
+}
+
+
+

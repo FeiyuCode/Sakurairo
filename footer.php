@@ -161,37 +161,13 @@
     </div>
 <?php endif; ?>
 
-<!-- 樱花飘落动效 -->
-<?php if (akina_option('sakurajs', '1')): ?>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository/static/js/sakura-<?php echo akina_option('sakura-falling-quantity'); ?>.js"></script>
-<?php endif; ?>
-
 <!-- 首页波浪特效 -->
 <?php if (akina_option('bolangcss', '1')): ?>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository/static/css/bolang.css">
 <?php endif; ?>
 
-<!-- Live2D看板娘 -->
-<?php if (akina_option('live2djs', '1')): ?>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/<?php echo akina_option('live2d-custom'); ?>/live2d-widget@<?php echo akina_option('live2d-custom-ver'); ?>/autoload.js"></script>
-<?php endif; ?>
-
-<!-- 自由添加JS -->
-<?php if (akina_option('addmorejs', '1')): ?>
-<script type="text/javascript" src="<?php echo akina_option('addmorejsurl'); ?>"></script>
-<?php endif; ?>
-
 <!-- logo字体部分 -->
 <link rel="stylesheet" href="<?php echo akina_option('logo_zt', ''); ?>" media="all">
-
-<!-- 收缩、展开 -->
-<script>jQuery(document).ready(
-function(jQuery){
-jQuery('.collapseButton').click(function(){
-jQuery(this).parent().parent().find('.xContent').slideToggle('slow');
-});
-});</script>
-
 
 </body>
 </html>

@@ -13,12 +13,16 @@ mashiro_global.ini = new function () {
         lazyload();
         social_share();
         post_list_show_animation();
-        copy_code_block();
-        web_audio();
+		copy_code_block();
+        hljs.initHighlightingOnLoad();
+        web_audio();
         coverVideoIni();
         checkskinSecter();
         scrollBar();
-        load_bangumi();
+        load_bangumi();
+		
+		
+	   	
     }
     this.pjax = function () { // pjax reload functions (pjax 重载函数)
         pjaxInit();
@@ -28,9 +32,13 @@ mashiro_global.ini = new function () {
         web_audio();
         coverVideoIni();
         checkskinSecter();
-        load_bangumi();
+        load_bangumi();
+		
+		
     }
 }
+
+            
 
 function setCookie(name, value, days) {
     var expires = "";
@@ -160,40 +168,11 @@ function social_share_limit(){
 
 
 function code_highlight_style() {
-    function gen_top_bar(i) {
-        var attributes = {
-            'autocomplete': 'off',
-            'autocorrect': 'off',
-            'autocapitalize': 'off',
-            'spellcheck': 'false',
-            'contenteditable': 'false',
-            'design': 'by Mashiro'
-        }
-        var ele_name = $('pre:eq(' + i + ')')[0].children[0].className;
-        var lang = ele_name.substr(0, ele_name.indexOf(" ")).replace('language-', '');
-        if (lang.toLowerCase() == "hljs") var lang = $('pre:eq(' + i + ') code').attr("class").replace('hljs', '')?$('pre:eq(' + i + ') code').attr("class").replace('hljs', ''):"text";
-        $('pre:eq(' + i + ')').addClass('highlight-wrap');
-        for (var t in attributes) {
-            $('pre:eq(' + i + ')').attr(t, attributes[t]);
-        }
-        $('pre:eq(' + i + ') code').attr('data-rel', lang.toUpperCase());
-    }
-    $('pre code').each(function (i, block) {
+        $('pre code').each(function (i, block) {
         hljs.highlightBlock(block);
     });
-    for (var i = 0; i < $('pre').length; i++) {
-        gen_top_bar(i);
-    }
-    hljs.initLineNumbersOnLoad();
-    $('pre').on('click', function (e) {
-        if (e.target !== this) return;
-        $(this).toggleClass('code-block-fullscreen');
-        $('html').toggleClass('code-block-fullscreen-html-scroll');
-    });
 }
-try {
-    code_highlight_style();
-} catch (e) {}
+
 
 if (Poi.reply_link_version == 'new') {
     $('body').on('click', '.comment-reply-link', function () {
@@ -672,7 +651,7 @@ function copy_code_block() {
         $(block).attr({
             id: 'hljs-' + i
         });
-        $(this).after('<a class="copy-code" href="javascript:" data-clipboard-target="#hljs-' + i + '" title="拷贝代码"><i class="fa fa-clipboard" aria-hidden="true"></i></a>');
+        $(this).after('<a class="copy-code" href="javascript:" data-clipboard-target="#hljs-' + i + '" title="拷贝代码"><i class="fa iconfont fa-copycode" aria-hidden="true">&#xe6321; copy</i></a>');
     });
     var clipboard = new ClipboardJS('.copy-code');
 }
@@ -961,9 +940,10 @@ if (mashiro_option.float_player_on) {
             };
         document.addEventListener('DOMContentLoaded', loadMeting, !1);
     }
-    if (document.body.clientWidth > 860) {
+    // if (document.body.clientWidth > 860) {
         aplayerF();
-    }
+
+   // }
 }
 
 function getqqinfo() {
@@ -2008,7 +1988,6 @@ window.onload = function() {
     $("#preload").fadeOut();
     setTimeout('$("#preload").remove()', 666);
 }
-
 
 
 var cached_body = $("body");

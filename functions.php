@@ -1,4 +1,5 @@
 <?php
+require_once(get_template_directory().'/inc/shortcode.php');
 /**
  * Sakura functions and definitions.
  *

@@ -13,6 +13,10 @@ Text Domain: sakurairo
 Tags: 多彩、轻松上手、体验完善、高自定义度
 */
 
+article p {
+	word-break:break-all;
+    text-align:justify;
+}
 #content {
     animation: main 1s
 }
@@ -95,6 +99,7 @@ body {
     margin: 0;
     font: 300 17px;
     text-shadow: 0 0 1px rgba(0, 0, 0, .1)
+   background-image: url("https://cdn.jsdelivr.net/gh/mirai-mamori/web-img/img/bg1.png");
 }
 
 input:-webkit-autofill {
@@ -102,13 +107,13 @@ input:-webkit-autofill {
 }
 
 ::selection {
-    background: #444;
-    color: #fff
+    /*background: #444;*/
+    color: #ff8967
 }
 
 ::-moz-selection {
-    background: #444;
-    color: #fff
+    /*background: #444;*/
+    color: #ff8967
 }
 
 article,
@@ -384,8 +389,7 @@ address {
 }
 
 pre {
-    background: rgba(254, 250, 199, .5);
-    border-radius: 10px;
+    /*background: rgba(254, 250, 199, .5);*/
     font: 15px/22px "Microsoft YaHei", Arial, Sans-Serif;
     line-height: 1.6;
     margin-bottom: 1.6em;
@@ -394,6 +398,8 @@ pre {
     text-shadow: none;
     color: #000
 }
+
+
 
 code,
 kbd,
@@ -433,7 +439,7 @@ html {
 }
 
 body {
-    background: #fff;
+    background-image: url("https://cdn.jsdelivr.net/gh/mirai-mamori/web-img/img/bg1.png");
     background-attachment: fixed;
     cursor: url(https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/cursor/normal.cur), auto
 }
@@ -1059,7 +1065,8 @@ a:hover {
     position: relative;
     height: 75px;
     line-height: 75px;
-    margin-left: -6px
+    margin-left: -6px;
+	 margin-top: -6px;
 }
 
 .site-title {
@@ -1902,6 +1909,7 @@ h1.page-title.mb- {
 }
 
 .post-footer {
+	  position: relative;
     padding: 30px 0;
     border-bottom: 1px dashed #ddd;
     border-top: 1px dashed #ddd;
@@ -1911,9 +1919,10 @@ h1.page-title.mb- {
 
 .post-lincenses {
     text-align: center;
-    padding-bottom: 5px;
+    padding-bottom: 12px;
     font-size: 14px
 }
+
 
 .post-lincenses a:hover {
     color: #888
@@ -1961,6 +1970,7 @@ h1.page-title.mb- {
 }
 
 .post-share {
+	  position: relative;
     float: right;
     list-style: none;
     margin-right: 20px;
@@ -1986,8 +1996,9 @@ h1.page-title.mb- {
 
 .post-share .social-share {
     opacity: 0;
-    display: none;
+  /*  display: none;*/
 }
+
 
 .post-share li {
     float: left;
@@ -2013,10 +2024,16 @@ h1.page-title.mb- {
     color: #EE9CA7
 }
 
+i.iconfont.icon-like {
+    font-size: 20px;
+}
+
 .post-share .show-share {
-    margin-left: 10px;
+   	position: relative;
+    top: -3px;
+   	margin-left: 5px;
     cursor: pointer;
-    opacity: .6;
+	  font-size: 20px;
     float: right;
     -moz-transition: opacity .1s ease-out;
     -o-transition: opacity .1s ease-out;
@@ -2024,6 +2041,33 @@ h1.page-title.mb- {
     transition: opacity .1s ease-out
 }
 
+@media (max-width: 860px){
+	.post-footer{
+		height: 120px;
+	}
+}
+
+@media (max-width: 440px){
+	.post-share .show-share {
+    	position: absolute;
+	    top: -37px;
+	    right: 45px;
+	}
+	.post-share{
+		position: absolute;
+      top: 124px;
+      right: 4px;
+		margin-right: 0px;
+	}
+	.post-like {
+     position: absolute;
+     top: 90px;
+		right: 0px;
+   }
+	.post-lincenses {
+    padding-bottom: 5px;
+   }
+}
 .post-share:hover .show-share,
 .post-share:hover .sharehidden {
     opacity: 1;
@@ -3876,6 +3920,9 @@ li.feature-2 {
     .loadvideo {
         display: none
     }
+	.blank {
+    background-color: transparent !important;
+}
 }
 
 .blank {
@@ -5160,7 +5207,7 @@ i.iconfont.down {
     .post-footer,
     .post-like,
     .post-share {
-        display: none
+       /* display: none;*/
     }
     .post-tags {
         text-align: center;
@@ -5189,7 +5236,8 @@ i.iconfont.down {
     }
     .site-header {
         /*移动端logo后背板高度*/
-        height: 65px;
+       /* height: 65px; */
+		height: 0px;
     }
     .site-branding {
         float: right;
@@ -5198,7 +5246,8 @@ i.iconfont.down {
         margin-right: -30px;
         /*移动端logo位置*/
         margin-top: -10px;
-    }
+		  display: none;
+    }
     .site-title img {
         height: 40px;
         line-height: 40px;
@@ -5279,7 +5328,9 @@ i.iconfont.down {
         position: relative
     }
     #mo-nav.open {
-        width: 250px
+		  transform: translateX(250px) translateY(0);
+        -webkit-transform: translateX(250px) translateY(0);
+			
     }
     .wrapper section {
         max-width: 600px
@@ -5356,17 +5407,18 @@ i.iconfont.down {
         background: #FFF
     }
     #mo-nav {
-        background-color: #FFF;
-        width: 0;
+			transition: background, transform .5s !important;
+        width: 250px;
         max-width: 250px !important;
         height: 100%;
-        z-index: 999;
-        position: absolute;
-        top: 0;
-        left: 0;
+        z-index: 99;
+        position: fixed;
+        left: -250px;
+        top: 0px;
         display: block;
         overflow-x: hidden !important;
-        overflow-y: auto
+        overflow-y: auto;
+			background-color: rgba(255, 255, 255, 0.8);
     }
     #mo-nav .m-avatar {
         position: relative;
@@ -5466,7 +5518,7 @@ i.iconfont.down {
     }
 }
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar {
     width: 6px;
     height: 6px;
     background-color: #eee
@@ -8080,6 +8132,7 @@ a.toc-link {
     box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
     z-index: 2
 }
+/*代码高亮
 .highlight-wrap {
     position: relative;
     background: #21252b;
@@ -8169,14 +8222,17 @@ a.toc-link {
     border-bottom-left-radius: 0;
     pointer-events: none
 }
+
+
 .hljs {
     display: block;
     overflow-x: auto;
     padding: .5em;
     color: #abb2bf;
     background: rgba(254, 250, 199, .5);
-    border-radius: 10px
+    border-radius: 10px 
 }
+*/
 .hljs-comment,
 .hljs-quote {
     color: #888f96;
@@ -9004,4 +9060,68 @@ input#wp-comment-cookies-consent {
     left: 50%;
     margin-left: -20px;
     margin-top: -20px;
+}
+
+/*友链居中 */
+span.sitename {
+   margin: 0px;
+}
+.linkdes {
+    margin: 0px;
+}
+li.link-item {
+    text-align: center;
+}
+.links ul li img{
+	float:none;
+}
+
+/* 清除手机端顶部菜单白框和logo  
+ * 5194 .site-header display: none
+ * 5191 site-header height: 0px */
+
+/* 电脑端logo位置  
+ * 1057 .site-branding margin-top: -6px; */
+
+/* 子菜单动画 */
+.site-top ul li a {
+    animation: fadeInLeft 0.8s ease-out !important;
+}
+/*手机端菜单修复*/
+@media (max-width: 860px){
+	#mo-nav ul li {
+    width: 200px;
+}
+}
+
+/*登录界面验证码框修复
+ *圆角 https://www.feiyuacg.com/wp-admin/css/forms.min.css?ver=5.4.2:2    border-radius: 12px;
+ *按钮背景颜色 /inc/login.css:339    background-color: #696d72;
+ *眼睛左移 /inc/login.css:116     margin-right: 8px; 
+ *宽度 /inc/login.css
+.aiowps-captcha-equation {
+    padding: 0 35px;
+}
+*/
+
+/* 登录框大概居中 
+ * /inc/login.css #login top: 44% */
+
+/*在线图标字体引入*/
+@font-face {
+  font-family: 'iconfont';  /* project id 1989446 */
+  src: url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.eot');
+  src: url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.svg#iconfont') format('svg');
+}
+
+.menu {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
