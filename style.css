@@ -375,7 +375,7 @@ blockquote:after {
     font-size: 3rem;
     position: absolute;
     bottom: -25px;
-    right: -5px;
+    right: 12px;
     color: #EE9CA7;
     font-family: FontAwesome
 }
