@@ -8535,6 +8535,8 @@ td.hljs-ln-numbers {
     background: #ddd;
     color: black;
 }
+
+/*
 h1[id*=toc-head]::before,
 h2[id*=toc-head]::before,
 h3[id*=toc-head]::before,
@@ -8547,6 +8549,8 @@ h6[id*=toc-head]::before {
     margin-top: -80px;
     visibility: hidden
 }
+*/
+
 @media (max-width:860px) {
     .widget-area {
         display: none;
