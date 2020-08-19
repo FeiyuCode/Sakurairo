@@ -27,6 +27,17 @@ function danger($atts,$content=null,$code=""){
     return $return;
 }
 add_shortcode('danger','danger');
+function infobox($atts,$content=null,$code=""){
+    extract(shortcode_atts(array("title"=>__('标题内容','moedog')),$atts));
+    $return = '<div class="infobox"><h1 class="infobox-title">';
+    $return .= $title;
+    $return .= '</h1><div class="infobox-body">';
+    $return .= do_shortcode($content);
+    $return .= '</div></div>';
+    return $return;
+}
+add_shortcode('infobox','infobox');
+
 function wymusic($atts,$content=null,$code=""){
     extract(shortcode_atts(array("autoplay"=>'0'),$atts));
     $return = '<iframe style="width:100%" frameborder="no" border="0" marginwidth="0" marginheight="0" height="86" src="https://music.163.com/outchain/player?type=2&id=';
@@ -273,6 +284,7 @@ QTags.addButton( '<?php _e('允许提示框','moedog'); ?>', '<?php _e('允许�
 QTags.addButton( '<?php _e('任务提示框','moedog'); ?>', '<?php _e('任务提示框','moedog'); ?>', '[task]', '[/task]' );
 QTags.addButton( '<?php _e('警告提示框','moedog'); ?>', '<?php _e('警告提示框','moedog'); ?>', '[warning]', '[/warning]' );
 QTags.addButton( '<?php _e('引文','moedog'); ?>', '<?php _e('引文','moedog'); ?>', '[quote]', '[/quote]' );
+QTags.addButton( '<?php _e('信息框','moedog'); ?>', '<?php _e('信息框','moedog'); ?>', '[infobox title=""]', '[/infobox]' );
 QTags.addButton( '<?php _e('文章目录','moedog'); ?>', '<?php _e('文章目录','moedog'); ?>', '[toc]' );
 
 	

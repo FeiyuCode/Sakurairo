@@ -3101,7 +3101,7 @@ a.page-numbers {
     padding: 0 10px;
     max-width: 860px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
 }
 
 .comments .commentwrap {
@@ -3164,7 +3164,7 @@ a.page-numbers {
         padding: 0 10px;
         max-width: 800px;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
     }
 }
 
@@ -3175,21 +3175,21 @@ a.page-numbers {
         padding: 0 10px;
         max-width: 800px;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
     }
 }
 
 .comment {
     margin: 0;
     padding: 0;
-    list-style: none
+    list-style: none;
 }
 
 .comment .contents {
     width: 100%;
     margin-bottom: 5px;
     float: left;
-    padding-bottom: 25px
+    padding-bottom: 25px;
 }
 
 .comment .isauthor {
@@ -9104,4 +9104,19 @@ li.link-item {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/*anme block*/
+.infobox {
+	 padding: 0px 10px 0px 10px;
+    border: 2px solid #f75c2f;
+    border-radius: 10px;
+}
+.infobox-title {
+    padding: 20px 0px 10px;
+    margin: 0px;
+    text-align: center;
+    border-bottom: 2px dotted #f75c2f;
+    height: auto;
+    font-size: 26px;
 }
