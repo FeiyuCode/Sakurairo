@@ -1328,6 +1328,12 @@ a:hover {
     padding: 13px 0 0
 }
 
+@media (max-width: 860px){
+	#main {
+    margin-top: 20px;
+	}
+}
+
 .site-content.notransition {
     -webkit-transition: none !important;
     -moz-transition: none !important;
