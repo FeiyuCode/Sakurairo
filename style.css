@@ -1325,7 +1325,7 @@ a:hover {
 }
 
 .site-main {
-    padding: 40px 0 0
+    padding: 13px 0 0
 }
 
 .site-content.notransition {
@@ -3061,7 +3061,7 @@ span.linkss-title {
     font-size: 25px;
     text-align: center;
     display: block;
-    margin: 50px 0 30px;
+    margin: 30px 0 30px;
     letter-spacing: 5px
 }
 
@@ -5139,7 +5139,8 @@ i.iconfont.down {
         display: none
     }
     .site-content {
-        padding: 0 4%
+        padding: 0 4%;
+        margin-top: -40px;
     }
     .feature img {
         width: 52px;
@@ -7455,7 +7456,7 @@ a.toc-link {
 
 .is-position-fixed {
     position: fixed !important;
-    top: 0
+    top: 0px
 }
 
 .is-active-link {
