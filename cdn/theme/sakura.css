@@ -186,7 +186,8 @@ body.dark .entry-content tr:nth-child(even){background-color: unset}
     overflow: visible;
     display: block;
     padding: 9.5px;
-    margin: 30px 0 10px 0;
+    margin-top: 25px;
+    margin-bottom: 30px;
     font-size: 13px;
 	border: 1px solid gray;
 	border-radius: 5px;
