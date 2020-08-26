@@ -6,7 +6,23 @@
  *
  * @package Akina
  */
-
+//WordPress 实现自动记录死链地址
+if(is_404() && strpos($_SERVER['HTTP_USER_AGENT'],'Baiduspider') !== false){
+        $file = @file("badlink.txt");//badlink.txt 就是在网站根目录的记录死链的文件
+	$check = true;
+	if(is_array($file) && !empty($file))
+	foreach($file as &$f){
+		if($f == home_url($_SERVER['REQUEST_URI'])."\n")
+		$check = false;
+	}
+	if($check){
+		$fp = fopen("badlink.txt","a");
+		flock($fp, LOCK_EX) ;
+		fwrite($fp, home_url($_SERVER['REQUEST_URI'])."\n");
+		flock($fp, LOCK_UN);
+		fclose($fp);
+	}
+}
  ?>
 <html <?php language_attributes(); ?>>
 <head>

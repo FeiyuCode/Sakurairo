@@ -13,9 +13,9 @@ Text Domain: sakurairo
 Tags: 多彩、轻松上手、体验完善、高自定义度
 */
 
-article p {
-    word-break: break-all;
+*{
     text-align: justify;
+	word-break: break-all;
 }
 
 #content {
@@ -9230,14 +9230,22 @@ blockquote.wp-block-quote {
 /* 登录框大概居中 
  * /inc/login.css #login top: 44% */
 
-
-/*在线图标字体引入*/
-
-@font-face {
-    font-family: 'iconfont';
-    /* project id 1989446 */
-    src: url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.eot');
-    src: url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.eot?#iefix') format('embedded-opentype'), url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.woff2') format('woff2'), url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.woff') format('woff'), url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.ttf') format('truetype'), url('//at.alicdn.com/t/font_1989446_c7yt9r0kwh.svg#iconfont') format('svg');
+/*文字两边对齐 导致的排版错位修复*/
+.header-tou , 
+.header-info, 
+.header-info p, 
+#colophon .footertext, 
+#colophon .footertext p, 
+#colophon .footer-device, 
+.author-profile .meta h3, 
+input#submit, 
+.links .sitename, 
+.links .linkdes, 
+.bangumi-title, 
+.bangumi-info, 
+.bangumi-status p, 
+#yan{
+    text-align: center;
 }
 
 .menu {
