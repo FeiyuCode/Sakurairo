@@ -105,6 +105,7 @@
     background: #0B1013;
     color: #dcdcdc;
     padding: 15px;
+    max-height: 300px;
 }
 
 .entry-content a {
