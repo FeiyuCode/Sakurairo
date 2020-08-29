@@ -2033,7 +2033,7 @@ i.iconfont.icon-like {
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 447px) {
     .post-share .show-share {
         position: absolute;
         top: -27px;
@@ -5204,7 +5204,8 @@ i.iconfont.down {
     .post-tags {
         text-align: center;
         float: none;
-        font-size: 12px
+        font-size: 12px;
+        margin-bottom: 10px;
     }
     .author-profile {
         display: none
@@ -9255,6 +9256,11 @@ input#submit,
 .post-tags {
     text-align: center;
     width: 100%;
+}
+@media (max-width: 440px){
+	.post-share .social-share {
+    margin-top: 10px;
+}
 }
 
 /*菜单字体图标配置*/
