@@ -1902,7 +1902,7 @@ h1.page-title.mb- {
     border-bottom: 1px dashed #ddd;
     border-top: 1px dashed #ddd;
     margin-top: 30px;
-    height: 100px
+    height: 120px
 }
 
 .post-lincenses {
@@ -2029,14 +2029,14 @@ i.iconfont.icon-like {
 
 @media (max-width: 860px) {
     .post-footer {
-        height: 120px;
+        height: 130px;
     }
 }
 
 @media (max-width: 440px) {
     .post-share .show-share {
         position: absolute;
-        top: -37px;
+        top: -27px;
         right: 45px;
     }
     .post-share {
@@ -2047,7 +2047,7 @@ i.iconfont.icon-like {
     }
     .post-like {
         position: absolute;
-        top: 90px;
+        top: 100px;
         right: 0px;
     }
     .post-lincenses {
@@ -9250,6 +9250,11 @@ input#submit,
 }
 .info-meta span{
 	word-break: keep-all;
+}
+
+.post-tags {
+    text-align: center;
+    width: 100%;
 }
 
 /*菜单字体图标配置*/
