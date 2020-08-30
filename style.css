@@ -9262,6 +9262,9 @@ input#submit,
     margin-top: 10px;
 }
 }
+.post-squares.nextprev .next .info h3 {
+    text-align: right;
+}
 
 /*菜单字体图标配置*/
 .menu {
