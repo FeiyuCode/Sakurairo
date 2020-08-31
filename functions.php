@@ -1806,4 +1806,12 @@ add_filter( 'file_is_displayable_image', 'mimvp_file_is_displayable_image', 10, 
 
 //code end
 
+//搜索结果排除所有页面
+function search_filter_page($query) {
+ if ($query->is_search) {
+ $query->set('post_type', 'post');
+ }
+ return $query;
+}
+add_filter('pre_get_posts','search_filter_page');
 
