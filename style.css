@@ -766,7 +766,7 @@ a:hover {
 
 .pattern-center h1.cat-title,
 .pattern-center h1.entry-title {
-    color: #f75c2f;
+    color: #f4f5f7;
     font-size: 40px;
     font-weight: 500;
     width: 80%;
@@ -9424,3 +9424,14 @@ footer#colophon {
 #teamnewslist ol{list-style:none;padding-left: 14px;border-left: 2px solid #eee;font-size: 18px;color: #666;}
 #teamnewslist b{font-size: 12px;font-weight: normal;color: #999;display: block;position: relative;margin-bottom:5px;}
 #teamnewslist b::after{position: absolute;top: 6px;left: -22px;content: '';width: 14px;height: 14px;border-radius: 50%;background-color: #fff;border: 2px solid #ccc;box-shadow: 2px 2px 0 rgba(255,255,255,1), -2px -2}
+
+/*页面标题*/
+.page-template-default .entry-title{
+	text-align: center;
+}
+.search .search-title{
+	color: #f75c2f !important;
+}
+#post-505 .entry-title{
+	font-size:30px;
+}
