@@ -1118,8 +1118,6 @@ a:hover {
 }
 
 .site-top ul {
-    margin: 0;
-    padding: 0;
     list-style: none;
     display: inline-block
 }
@@ -3086,7 +3084,7 @@ a.page-numbers {
     width: 100%;
     background: #eee;
     border: 0;
-    margin: 40px 0
+    margin: 0
 }
 
 @media (max-width:1150px) {
