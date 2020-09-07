@@ -5885,7 +5885,8 @@ html::-webkit-scrollbar {
     font-size: 12px;
     padding: 10px 10px;
     color: #FB98C0;
-    border-radius: 4px 4px 0 0
+    border-radius: 4px 4px 0 0;
+    text-align: center;
 }
 
 .herder-user-name-u {
@@ -5893,6 +5894,7 @@ html::-webkit-scrollbar {
     font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-align: center;
     -o-text-overflow: ellipsis;
     white-space: nowrap
 }
