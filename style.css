@@ -6,16 +6,16 @@ Theme URI: https://github.com/mirai-mamori/Sakurairo
 Author: made by FUUKEI
 Author URI: https://asuhe.jp/
 Description: A colorful, Easy-to-use, Perfect Experience, and Powerful Customizable WordPress Theme (Based on Theme Sakura)
-Version: 1.20.7
+Version: 1.20.10
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sakurairo
 Tags: 多彩、轻松上手、体验完善、高自定义度
 */
 
-*{
+* {
     text-align: justify;
-	word-break: break-all;
+    word-break: break-all;
 }
 
 #content {
@@ -754,6 +754,7 @@ a:hover {
 .search-title {
     text-align: center;
 }
+
 .pattern-center header.pattern-header {
     position: absolute;
     top: 45%;
@@ -885,7 +886,6 @@ a:hover {
     overflow: hidden;
     margin: 0 auto
 }
-
 
 @media (max-width:860px) {
     .pattern-center-sakura {
@@ -1302,7 +1302,6 @@ a:hover {
     padding: 13px 0 0
 }
 
-
 .site-content.notransition {
     -webkit-transition: none !important;
     -moz-transition: none !important;
@@ -1487,7 +1486,6 @@ i.iconfont.hotpost {
     background: #EFEFEF;
     margin-top: 20px
 }
-
 
 .post-list-thumb {
     will-change: transform;
@@ -3877,8 +3875,6 @@ li.feature-2 {
     }
 }
 
-
-
 .focusinfo {
     position: relative;
     max-width: 800px;
@@ -5284,7 +5280,7 @@ i.iconfont.down {
         transform: translateX(250px) translateY(0);
         -webkit-transform: translateX(250px) translateY(0);
     }
-	/*
+    /*
     .wrapper section {
         max-width: 600px
     
@@ -9107,17 +9103,23 @@ body:not(.heimu_toggle_on) .new:hover .heimu.off {
 .xbtn02 {
     color: black !important;
 }
+
+
 /*去除搜索头图*/
+
 .search .pattern-attachment-img {
     display: none;
 }
-.search .pattern-center::before{
+
+.search .pattern-center::before {
     display: none;
 }
-.search .pattern-header{
+
+.search .pattern-header {
     position: static !important;
     margin: 100px 0 50px 0;
 }
+
 .search h1.search-title {
     font-size: 25px;
     font-weight: 400;
@@ -9199,6 +9201,7 @@ blockquote.wp-block-quote {
     margin-top: 30px;
 }
 
+
 /*登录界面验证码框修复
  *圆角 https://www.feiyuacg.com/wp-admin/css/forms.min.css?ver=5.4.2:2    border-radius: 12px;
  *按钮背景颜色 /inc/login.css:339    background-color: #696d72;
@@ -9213,42 +9216,49 @@ blockquote.wp-block-quote {
 /* 登录框大概居中 
  * /inc/login.css #login top: 44% */
 
+
 /*文字两边对齐 导致的排版错位修复*/
-.header-tou , 
-.header-info, 
-.header-info p, 
-#colophon .footertext, 
-#colophon .footertext p, 
-#colophon .footer-device, 
-.author-profile .meta h3, 
-input#submit, 
-.links .sitename, 
-.links .linkdes, 
-.bangumi-title, 
-.bangumi-info, 
-.bangumi-status p, 
-#yan, 
-.skin-menu .menu-list li{
+
+.header-tou,
+.header-info,
+.header-info p,
+#colophon .footertext,
+#colophon .footertext p,
+#colophon .footer-device,
+.author-profile .meta h3,
+input#submit,
+.links .sitename,
+.links .linkdes,
+.bangumi-title,
+.bangumi-info,
+.bangumi-status p,
+#yan,
+.skin-menu .menu-list li {
     text-align: center;
 }
-.info-meta span{
-	word-break: keep-all;
+
+.info-meta span {
+    word-break: keep-all;
 }
 
 .post-tags {
     text-align: center;
     width: 100%;
 }
-@media (max-width: 440px){
-	.post-share .social-share {
-    margin-top: 10px;
+
+@media (max-width: 440px) {
+    .post-share .social-share {
+        margin-top: 10px;
+    }
 }
-}
+
 .post-squares.nextprev .next .info h3 {
     text-align: right;
 }
 
+
 /*菜单字体图标配置*/
+
 .menu {
     font-family: "iconfont" !important;
     font-size: 16px;
@@ -9283,6 +9293,7 @@ footer#colophon {
     font-size: 26px;
 }
 
+
 /*九宫格-3*3*/
 
 .squareimg-3 {
@@ -9291,21 +9302,21 @@ footer#colophon {
     height: 0;
     padding-bottom: 56.25%;
     /* padding百分比是相对父元素宽度计算的 */
-	margin-bottom:2%;
+    margin-bottom: 2%;
 }
-    
+
 .squareimg-3 ul {
     position: absolute;
     top: 0;
     left: 0;
-    border:none !important;
+    border: none !important;
     width: 100%;
     height: 100%;
     padding: 0px !important;
     margin: 0px;
     /* 铺满父元素容器，这时候宽高就始终相等了 */
 }
-        
+
 .squareimg-3 ul li {
     width: calc(98% / 3);
     /* calc里面的运算符两边要空格 */
@@ -9314,12 +9325,12 @@ footer#colophon {
     margin-bottom: 1%;
     overflow: hidden;
 }
-        
+
 .squareimg-3 ul {
     display: flex;
     flex-wrap: wrap;
 }
-        
+
 .squareimg-3 ul li {
     position: relative;
     flex-grow: 1;
@@ -9330,26 +9341,27 @@ footer#colophon {
     font-size: 50px;
     line-height: 2;
 }
-        
+
 .squareimg-3 ul li:nth-of-type(3n) {
     /* 选择个数是3的倍数的元素 */
     margin-right: 0;
 }
-       
+
 .squareimg-3 ul li:nth-of-type(n+7) {
     /* 选择倒数的3个元素，n可以取0 */
     margin-bottom: 0;
 }
 
 .squareimg-3 img {
-   position: absolute;
-	transform: translate(-50%, -50%);
-   top: 50%;
-   left: 50%;
-	object-fit: cover;
-	height: 100%;
-	width: 100%; 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
+
 
 /*九宫格-2*2*/
 
@@ -9359,21 +9371,21 @@ footer#colophon {
     height: 0;
     padding-bottom: 56.25%;
     /* padding百分比是相对父元素宽度计算的 */
-	margin-bottom:2%;
+    margin-bottom: 2%;
 }
-    
+
 .squareimg-2 ul {
     position: absolute;
     top: 0;
     left: 0;
-    border:none !important;
+    border: none !important;
     width: 100%;
     height: 100%;
     padding: 0px !important;
     margin: 0px;
     /* 铺满父元素容器，这时候宽高就始终相等了 */
 }
-        
+
 .squareimg-2 ul li {
     width: calc(98% / 2);
     /* calc里面的运算符两边要空格 */
@@ -9382,12 +9394,12 @@ footer#colophon {
     margin-bottom: 1%;
     overflow: hidden;
 }
-        
+
 .squareimg-2 ul {
     display: flex;
     flex-wrap: wrap;
 }
-        
+
 .squareimg-2 ul li {
     position: relative;
     flex-grow: 1;
@@ -9398,40 +9410,74 @@ footer#colophon {
     font-size: 50px;
     line-height: 2;
 }
-        
+
 .squareimg-2 ul li:nth-of-type(2n) {
     /* 选择个数是3的倍数的元素 */
     margin-right: 0;
 }
-       
+
 .squareimg-2 ul li:nth-of-type(n+3) {
-   /* 选择倒数的2个元素，n可以取0*/
-    margin-bottom: 0;
+    /* 选择倒数的2个元素，n可以取0*/
+    margin-bottom: 0;
 }
 
 .squareimg-2 img {
-   position: absolute;
-	transform: translate(-50%, -50%);
-   top: 50%;
-   left: 50%;
-	object-fit: cover;
-	height: 100%;
-	width: 100%; 
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
+
 
 /*时间轴*/
+
+
 /* 站点动态时间轴 */
-#teamnewslist ol{list-style:none;padding-left: 14px;border-left: 2px solid #eee;font-size: 18px;color: #666;}
-#teamnewslist b{font-size: 12px;font-weight: normal;color: #999;display: block;position: relative;margin-bottom:5px;}
-#teamnewslist b::after{position: absolute;top: 6px;left: -22px;content: '';width: 14px;height: 14px;border-radius: 50%;background-color: #fff;border: 2px solid #ccc;box-shadow: 2px 2px 0 rgba(255,255,255,1), -2px -2}
+
+#teamnewslist ol {
+    list-style: none;
+    padding-left: 14px;
+    border-left: 2px solid #eee;
+    font-size: 18px;
+    color: #666;
+}
+
+#teamnewslist b {
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+#teamnewslist b::after {
+    position: absolute;
+    top: 6px;
+    left: -22px;
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 0 rgba(255, 255, 255, 1), -2px -2
+}
+
 
 /*页面标题*/
-.page-template-default .entry-title{
-	text-align: center;
+
+.page-template-default .entry-title {
+    text-align: center;
 }
-.search .search-title{
-	color: #f75c2f !important;
+
+.search .search-title {
+    color: #f75c2f !important;
 }
-#post-505 .entry-title{
-	font-size:30px;
+
+#post-505 .entry-title {
+    font-size: 30px;
 }

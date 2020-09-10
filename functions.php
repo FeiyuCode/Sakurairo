@@ -225,6 +225,11 @@ function sakura_scripts()
 {
     if (akina_option('jsdelivr_cdn_test')) {
         wp_enqueue_script('js_lib', get_template_directory_uri() . '/cdn/js/lib.js', array(), SAKURA_VERSION . akina_option('cookie_version', ''), true);
+        if (akina_option('SmoothScroll')) {
+            wp_enqueue_script('SmoothScroll', get_template_directory_uri() . '/cdn/js/src/20.SmoothScroll.js', array(), SAKURA_VERSION . akina_option('cookie_version', ''), true);
+        }
+    } elseif (akina_option('SmoothScroll')) {
+        wp_enqueue_script('js_lib', 'https://cdn.jsdelivr.net/combine/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/lib.min.js,gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/src/20.SmoothScroll.js', array(), SAKURA_VERSION, true);
     } else {
         wp_enqueue_script('js_lib', 'https://cdn.jsdelivr.net/gh/mirai-mamori/Sakurairo@' . SAKURA_VERSION . '/cdn/js/lib.min.js', array(), SAKURA_VERSION, true);
     }
@@ -1814,4 +1819,20 @@ function search_filter_page($query) {
  return $query;
 }
 add_filter('pre_get_posts','search_filter_page');
+
+//展开收缩功能
+function xcollapse($atts, $content = null){
+    extract(shortcode_atts(array("title"=>""),$atts));
+    return '<div style="margin: 0.5em 0;">
+    <div class="xControl">
+    <i class="fa fa-arrow-down" style="color: #9F6F26;"></i> &nbsp;&nbsp;
+    <span class="xTitle">'.$title.'</span>&nbsp;&nbsp;==>&nbsp;&nbsp;<a href="javascript:void(0)" class="collapseButton xButton"><span class="xbtn02">展开 / 收缩</span></a>
+    <div style="clear: both;"></div>
+    </div>
+    <div class="xContent" style="display: none;">'.$content.'</div>
+    </div>';
+   }
+   add_shortcode('collapse', 'xcollapse');
+
+//code end
 
