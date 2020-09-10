@@ -23,6 +23,7 @@
 -->
 <html <?php language_attributes(); ?>>
 <head>
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1989446_0vcimqzf913.css">
 <link rel="stylesheet" href="https://<?php echo akina_option('gfontsapi'); ?>/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC<?php echo akina_option('addfonts'); ?>" media="all">
 <meta name="theme-color" content="<?php echo akina_option('theme_skin'); ?>">
 <meta charset="<?php bloginfo( 'charset' ); ?>">

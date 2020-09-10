@@ -127,7 +127,7 @@ function tudou($atts,$content=null,$code=""){
 add_shortcode('tudou','tudou');
 function vqq($atts,$content=null,$code=""){
     extract(shortcode_atts(array("auto"=>'0'),$atts));
-    $return = '<div class="video-container"><iframe frameborder="0" width="100%" hight="498"  src="https://v.qq.com/iframe/player.html?vid=';
+    $return = '<div class="video-container"><iframe frameborder="0" width="100%" height="498"  src="https://v.qq.com/iframe/player.html?vid=';
     $return .= $content;
     $return .= '&tiny=0&auto=';
     $return .= $auto;
@@ -151,7 +151,7 @@ function bilibili($atts,$content=null,$code=""){
     $return .= $cid;
     $return .= '&page=';
     $return .= $page;
-    $return .= '" allowtransparency="true" width="100%" hight="498" scrolling="no" frameborder="0" ></iframe>';
+    $return .= '" allowtransparency="true" width="100%" height="498" scrolling="no" frameborder="0" ></iframe>';
     return $return;
 }
 add_shortcode('bilibili','bilibili');
