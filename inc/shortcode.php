@@ -151,6 +151,7 @@ function bilibili($atts,$content=null,$code=""){
     $return .= $cid;
     $return .= '&page=';
     $return .= $page;
+    $return .= '&high_quality=1';
     $return .= '" allowtransparency="true" width="100%" height="498" scrolling="no" frameborder="0" ></iframe>';
     return $return;
 }
